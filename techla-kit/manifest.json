@@ -1,0 +1,53 @@
+{
+  "name": "techla-kit",
+  "version": "1.0.0",
+  "description": "Toolkit Claude Code tổng hợp dành cho học viên Techla - kết hợp SuperClaude Framework + Alireza claude-skills",
+  "author": "Techla AI Dev",
+  "homepage": "https://github.com/techlaaidev/techla-kit",
+  "license": "MIT",
+  "claude_home": "~/.claude",
+  "sources": {
+    "superclaude": {
+      "name": "SuperClaude Framework",
+      "upstream": "https://github.com/SuperClaude-Org/SuperClaude_Framework",
+      "license": "MIT",
+      "path": "components/superclaude",
+      "components": ["agents", "commands", "modes", "core", "skills", "hooks"]
+    },
+    "claude-skills": {
+      "name": "Alireza Claude Skills",
+      "upstream": "https://github.com/alirezarezvani/claude-skills",
+      "license": "MIT",
+      "path": "components/claude-skills",
+      "components": [
+        "business-growth", "c-level-advisor", "compliance-os",
+        "engineering", "engineering-team", "finance",
+        "marketing", "marketing-skill", "product-team",
+        "productivity", "project-management", "ra-qm-team",
+        "research", "orchestration", "standards", "templates"
+      ]
+    }
+  },
+  "install_targets": {
+    "skills": "~/.claude/skills",
+    "agents": "~/.claude/agents",
+    "commands": "~/.claude/commands",
+    "modes": "~/.claude/modes",
+    "rules": "~/.claude/rules",
+    "hooks": "~/.claude/settings.json"
+  },
+  "agent_export_targets": {
+    "codex": {
+      "primary_format": "AGENTS.md",
+      "extra_files": [".codex/instructions.md"]
+    },
+    "opencode": {
+      "primary_format": "AGENTS.md",
+      "extra_files": []
+    },
+    "pi": {
+      "primary_format": "AGENTS.md",
+      "extra_files": []
+    }
+  }
+}
